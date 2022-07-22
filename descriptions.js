@@ -136,7 +136,7 @@ async function main() {
 		forksIcon.style.top = "2px";
 		forksIcon.style.marginRight = "3px";
 
-		forks.innerHTML = `<a class="no-alter" style="color: #aaa; text-decoration: none" target="_self" href="https://github.com/${repo.name}/network/members">${forksIcon.outerHTML}${repo.forks}</a>`;
+		forks.innerHTML = `<a class="no-alter" style="color: #aaa; text-decoration: none" target="_self" href="https://github.com/JSRoyals/${repo.name}/network/members">${forksIcon.outerHTML}${repo.forks}</a>`;
 		forks.onmouseover = () => {
 			forks.querySelector("img").src = "github_fork_hover.png";
 			forks.querySelector("a").style.color = "#58a6ff";
