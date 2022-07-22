@@ -93,13 +93,24 @@ README.style.margin = "10px";
 README.style.padding = "25px 15px 22px 15px";
 
 //#region DESCRIPTION
-var elms = DESCRIPTIONS[location.pathname];
-README.append(...elms);
+(async () => {
+	await reposLoaded();
+	await colorsLoaded();
+	var elms = await DESCRIPTIONS[location.pathname]();
+	README.append(...elms);
+
+	document.querySelectorAll("a").forEach((a) => {
+		if (a.classList.contains("no-alter")) return;
+		a.style.color = "#58a6ff";
+		a.style.textDecoration = "none";
+		a.onmouseover = () => {
+			a.style.textDecoration = "underline";
+		}
+		a.onmouseleave = () => {
+			a.style.textDecoration = "none";
+		}
+	});
+})();
 //#endregion
 document.body.append(README);
 //#endregion
-
-document.querySelectorAll("a").forEach((a) => {
-	a.style.color = "#58a6ff";
-	a.style.textDecoration = "none";
-});
