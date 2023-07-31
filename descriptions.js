@@ -220,7 +220,7 @@ function application() {
 	var applicationText = document.createElement("div");
 	applicationText.style.textAlign = "center";
 	applicationText.style.color = "#eee";
-	applicationText.innerHTML = `Now that you've met the requirements, it's time to send in your application! You will be emailing the application to the <a href="https://github.com/xJustJqy">founder</a> of JSRoyals. Click <a href="mailto:jay@sireofcali.net?subject=JSRoyals Application - USERNAME&body=Links to 2 JavaScript project repositories:%0D- %0D- %0D%0DWhat libraries do you know:%0D- %0D%0DAge, Name, and proof of identity: (This will NEVER be shared)%0D">here</a> to proceed`;
+	applicationText.innerHTML = `Now that you've met the requirements, it's time to send in your application! You will be emailing the application to the <a href="https://github.com/xJustJqy">founder</a> of JSRoyals. Click <a target="_blank" href="mailto:jay@sireofcali.net?subject=JSRoyals Application - USERNAME&body=Links to 2 JavaScript project repositories:%0D- %0D- %0D%0DWhat libraries do you know:%0D- %0D%0DAge, Name, and proof of identity: (This will NEVER be shared)%0D">here</a> to proceed`;
 
 	return [
 		desc,
